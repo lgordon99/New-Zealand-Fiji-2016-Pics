@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var appTitle: UILabel!
+    @IBAction func newZealandButton(sender: UIButton) {
+    }
+    @IBAction func fijiButton(sender: UIButton) {
+    }
+    @IBOutlet weak var newZealandPic: UIImageView!
+    @IBOutlet weak var fijiPic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

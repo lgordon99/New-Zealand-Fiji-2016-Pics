@@ -1,25 +1,266 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="NZF_2016" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand &amp; Fiji Trip 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-c4-Ezb">
+                                <rect key="frame" x="0.0" y="20" width="414" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC3-zY-GrO">
+                                <rect key="frame" x="83" y="126" width="248.5" height="110.5"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <color key="tintColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="New Zealand"/>
+                                <connections>
+                                    <action selector="newZealandButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCL-59-Jly"/>
+                                    <segue destination="8Kz-qR-qVO" kind="show" id="eeE-sY-8sI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newZealandButtonPic" translatesAutoresizingMaskIntoConstraints="NO" id="Mjx-E8-yoz">
+                                <rect key="frame" x="62" y="274" width="290" height="147"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fijiPic" translatesAutoresizingMaskIntoConstraints="NO" id="GvC-za-pev">
+                                <rect key="frame" x="62" y="575" width="290" height="147"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roR-pM-r2s">
+                                <rect key="frame" x="83" y="443" width="248.5" height="110.5"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <color key="tintColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Fiji">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fijiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kba-aD-DAh"/>
+                                    <segue destination="ali-PA-dKj" kind="show" id="lbH-8g-QJB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dPd-c4-Ezb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0tL-wp-suH"/>
+                            <constraint firstItem="Mjx-E8-yoz" firstAttribute="top" secondItem="WC3-zY-GrO" secondAttribute="bottom" constant="37.5" id="2hI-oK-hi5"/>
+                            <constraint firstItem="roR-pM-r2s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3rR-NH-lTS"/>
+                            <constraint firstItem="GvC-za-pev" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Dhg-3D-W08"/>
+                            <constraint firstItem="WC3-zY-GrO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="LnZ-Qp-LVJ"/>
+                            <constraint firstItem="roR-pM-r2s" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="N1V-ed-rNu"/>
+                            <constraint firstItem="Mjx-E8-yoz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Okm-rt-pNB"/>
+                            <constraint firstItem="WC3-zY-GrO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TWY-MD-upk"/>
+                            <constraint firstItem="WC3-zY-GrO" firstAttribute="top" secondItem="dPd-c4-Ezb" secondAttribute="bottom" constant="65" id="UXz-vV-8Ng"/>
+                            <constraint firstItem="dPd-c4-Ezb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Yfj-oY-5Im"/>
+                            <constraint firstItem="Mjx-E8-yoz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="avn-gF-Ein"/>
+                            <constraint firstItem="roR-pM-r2s" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="b0a-ML-6mt"/>
+                            <constraint firstItem="GvC-za-pev" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="bUg-xF-bbd"/>
+                            <constraint firstItem="GvC-za-pev" firstAttribute="top" secondItem="roR-pM-r2s" secondAttribute="bottom" constant="21.5" id="fXM-xN-fT3"/>
+                            <constraint firstItem="Mjx-E8-yoz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mym-yb-lYz"/>
+                            <constraint firstItem="roR-pM-r2s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="423" id="n9g-bE-JKq"/>
+                            <constraint firstItem="GvC-za-pev" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="qD0-OU-v6C"/>
+                            <constraint firstItem="dPd-c4-Ezb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vmm-mz-qG2"/>
+                            <constraint firstItem="WC3-zY-GrO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="xIo-2G-wSk"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="fijiPic" destination="GvC-za-pev" id="dsC-0W-nYb"/>
+                        <outlet property="newZealandPic" destination="Mjx-E8-yoz" id="ytf-TU-7cm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="189" y="433"/>
+        </scene>
+        <!--New Zealand-->
+        <scene sceneID="AYn-4X-CXB">
+            <objects>
+                <viewController title="New Zealand" id="8Kz-qR-qVO" customClass="ViewController2" customModule="NZF_2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGn-PC-alR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ViA-gx-gVc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zg5-aB-N5V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Zealand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmK-Hv-RZT">
+                                <rect key="frame" x="0.0" y="20" width="414" height="110.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1NZ" translatesAutoresizingMaskIntoConstraints="NO" id="83G-EI-C62">
+                                <rect key="frame" x="21" y="161" width="372.5" height="294.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Po-8b-9Lu">
+                                <rect key="frame" x="21" y="549" width="124" height="110.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
+                                <state key="normal" title="&lt;--"/>
+                                <connections>
+                                    <action selector="backArrowNZ:" destination="8Kz-qR-qVO" eventType="touchUpInside" id="Wj0-pV-bba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LF8-Hn-y1D">
+                                <rect key="frame" x="270" y="549" width="124" height="110.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
+                                <state key="normal" title="--&gt;"/>
+                                <connections>
+                                    <action selector="forwardArrowNZ:" destination="8Kz-qR-qVO" eventType="touchUpInside" id="jgU-Yt-6x7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-Kd-GTJ">
+                                <rect key="frame" x="166" y="642" width="83" height="73.5"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeNZ:" destination="8Kz-qR-qVO" eventType="touchUpInside" id="pA7-CW-eUg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tL1-YE-TYY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LF8-Hn-y1D" firstAttribute="top" secondItem="83G-EI-C62" secondAttribute="bottom" constant="93.5" id="3PI-zU-Ro9"/>
+                            <constraint firstItem="83G-EI-C62" firstAttribute="top" secondItem="lmK-Hv-RZT" secondAttribute="bottom" constant="30.5" id="6wI-aJ-qip"/>
+                            <constraint firstItem="7Po-8b-9Lu" firstAttribute="width" secondItem="zg5-aB-N5V" secondAttribute="width" multiplier="0.3" id="7Rv-uu-jGp"/>
+                            <constraint firstItem="83G-EI-C62" firstAttribute="width" secondItem="zg5-aB-N5V" secondAttribute="width" multiplier="0.9" id="B3Y-wj-YLa"/>
+                            <constraint firstItem="lmK-Hv-RZT" firstAttribute="height" secondItem="zg5-aB-N5V" secondAttribute="height" multiplier="0.15" id="Dye-PA-zVQ"/>
+                            <constraint firstItem="lmK-Hv-RZT" firstAttribute="top" secondItem="cGn-PC-alR" secondAttribute="bottom" id="EGL-jH-YlR"/>
+                            <constraint firstItem="7Po-8b-9Lu" firstAttribute="leading" secondItem="zg5-aB-N5V" secondAttribute="leadingMargin" constant="1" id="Gdm-1n-WKl"/>
+                            <constraint firstItem="83G-EI-C62" firstAttribute="height" secondItem="zg5-aB-N5V" secondAttribute="height" multiplier="0.4" id="IB6-YR-4FW"/>
+                            <constraint firstItem="lmK-Hv-RZT" firstAttribute="width" secondItem="zg5-aB-N5V" secondAttribute="width" id="MqY-Yl-SgR"/>
+                            <constraint firstItem="83G-EI-C62" firstAttribute="centerX" secondItem="lmK-Hv-RZT" secondAttribute="centerX" id="Ob9-fd-Tos"/>
+                            <constraint firstItem="wdr-Kd-GTJ" firstAttribute="centerX" secondItem="zg5-aB-N5V" secondAttribute="centerX" id="bJH-Ct-c0M"/>
+                            <constraint firstItem="wdr-Kd-GTJ" firstAttribute="width" secondItem="zg5-aB-N5V" secondAttribute="width" multiplier="0.2" id="bZu-gq-tL3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LF8-Hn-y1D" secondAttribute="trailing" id="bgX-Hl-Dj4"/>
+                            <constraint firstItem="wdr-Kd-GTJ" firstAttribute="top" secondItem="83G-EI-C62" secondAttribute="bottom" constant="186.5" id="hCU-h3-1hB"/>
+                            <constraint firstItem="wdr-Kd-GTJ" firstAttribute="height" secondItem="zg5-aB-N5V" secondAttribute="height" multiplier="0.1" id="lBi-a2-B7Z"/>
+                            <constraint firstItem="7Po-8b-9Lu" firstAttribute="top" secondItem="83G-EI-C62" secondAttribute="bottom" constant="93.5" id="oqo-Af-isZ"/>
+                            <constraint firstItem="LF8-Hn-y1D" firstAttribute="width" secondItem="zg5-aB-N5V" secondAttribute="width" multiplier="0.3" id="otL-J1-jh1"/>
+                            <constraint firstItem="LF8-Hn-y1D" firstAttribute="height" secondItem="zg5-aB-N5V" secondAttribute="height" multiplier="0.15" id="sq7-RL-9vf"/>
+                            <constraint firstItem="lmK-Hv-RZT" firstAttribute="centerX" secondItem="zg5-aB-N5V" secondAttribute="centerX" id="xco-dE-XTk"/>
+                            <constraint firstItem="7Po-8b-9Lu" firstAttribute="height" secondItem="zg5-aB-N5V" secondAttribute="height" multiplier="0.15" id="z86-JQ-SCJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="newZealandImages" destination="83G-EI-C62" id="EXc-yO-077"/>
+                        <outlet property="newZealandTitle" destination="lmK-Hv-RZT" id="v0b-bl-grX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z69-GQ-7FJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="433"/>
+        </scene>
+        <!--Fiji-->
+        <scene sceneID="O3X-eQ-x7i">
+            <objects>
+                <viewController title="Fiji" id="ali-PA-dKj" customClass="ViewController3" customModule="NZF_2016" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ce0-CH-OIT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q09-NA-8VF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0or-Ol-DiS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnL-eK-dA6">
+                                <rect key="frame" x="0.0" y="20" width="414" height="110.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1Fiji" translatesAutoresizingMaskIntoConstraints="NO" id="KWn-vu-Qdu">
+                                <rect key="frame" x="20" y="159" width="372.5" height="294.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-Ih-DAK">
+                                <rect key="frame" x="20" y="548" width="124" height="110.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
+                                <state key="normal" title="&lt;--"/>
+                                <connections>
+                                    <action selector="backArrowFiji:" destination="ali-PA-dKj" eventType="touchUpInside" id="AyD-Pk-Jf5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alN-Aj-f8y">
+                                <rect key="frame" x="270" y="548" width="124" height="110.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
+                                <state key="normal" title="--&gt;"/>
+                                <connections>
+                                    <action selector="forwardArrowFiji:" destination="ali-PA-dKj" eventType="touchUpInside" id="B8J-Jd-Bod"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCN-IE-nDG">
+                                <rect key="frame" x="166" y="642" width="83" height="73.5"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButtonFiji:" destination="ali-PA-dKj" eventType="touchUpInside" id="L3M-6h-NYS"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="kwf-j3-2bW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="alN-Aj-f8y" firstAttribute="height" secondItem="0or-Ol-DiS" secondAttribute="height" multiplier="0.15" id="4aT-oC-BnO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kfe-Ih-DAK" secondAttribute="leading" id="7sD-LF-Ws2"/>
+                            <constraint firstItem="kfe-Ih-DAK" firstAttribute="top" secondItem="KWn-vu-Qdu" secondAttribute="bottom" constant="94.5" id="AbQ-qK-8cd"/>
+                            <constraint firstItem="KWn-vu-Qdu" firstAttribute="centerX" secondItem="0or-Ol-DiS" secondAttribute="centerX" id="AkY-1e-HZA"/>
+                            <constraint firstItem="kfe-Ih-DAK" firstAttribute="height" secondItem="0or-Ol-DiS" secondAttribute="height" multiplier="0.15" id="Ala-Pn-GYS"/>
+                            <constraint firstItem="LnL-eK-dA6" firstAttribute="centerX" secondItem="0or-Ol-DiS" secondAttribute="centerX" id="QBN-in-DYF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="alN-Aj-f8y" secondAttribute="trailing" id="Qj3-ih-1OP"/>
+                            <constraint firstItem="KWn-vu-Qdu" firstAttribute="height" secondItem="0or-Ol-DiS" secondAttribute="height" multiplier="0.4" id="QqB-kn-2WU"/>
+                            <constraint firstItem="XCN-IE-nDG" firstAttribute="width" secondItem="0or-Ol-DiS" secondAttribute="width" multiplier="0.2" id="W6W-Xj-ORO"/>
+                            <constraint firstItem="XCN-IE-nDG" firstAttribute="top" secondItem="KWn-vu-Qdu" secondAttribute="bottom" constant="188.5" id="XKl-rO-TIS"/>
+                            <constraint firstItem="XCN-IE-nDG" firstAttribute="centerX" secondItem="0or-Ol-DiS" secondAttribute="centerX" id="Y7A-Z5-H6r"/>
+                            <constraint firstItem="XCN-IE-nDG" firstAttribute="height" secondItem="0or-Ol-DiS" secondAttribute="height" multiplier="0.1" id="YcJ-9c-qbs"/>
+                            <constraint firstItem="LnL-eK-dA6" firstAttribute="height" secondItem="0or-Ol-DiS" secondAttribute="height" multiplier="0.15" id="Zhq-Xr-jez"/>
+                            <constraint firstItem="KWn-vu-Qdu" firstAttribute="width" secondItem="0or-Ol-DiS" secondAttribute="width" multiplier="0.9" id="f8n-MZ-qfh"/>
+                            <constraint firstItem="kfe-Ih-DAK" firstAttribute="width" secondItem="0or-Ol-DiS" secondAttribute="width" multiplier="0.3" id="j6I-gt-XOY"/>
+                            <constraint firstItem="LnL-eK-dA6" firstAttribute="width" secondItem="0or-Ol-DiS" secondAttribute="width" id="jaq-sa-PFT"/>
+                            <constraint firstItem="LnL-eK-dA6" firstAttribute="top" secondItem="Ce0-CH-OIT" secondAttribute="bottom" id="nyL-gt-QM8"/>
+                            <constraint firstItem="KWn-vu-Qdu" firstAttribute="top" secondItem="LnL-eK-dA6" secondAttribute="bottom" constant="28.5" id="q9a-RB-vgz"/>
+                            <constraint firstItem="alN-Aj-f8y" firstAttribute="width" secondItem="0or-Ol-DiS" secondAttribute="width" multiplier="0.3" id="uSg-sE-1ic"/>
+                            <constraint firstItem="alN-Aj-f8y" firstAttribute="top" secondItem="KWn-vu-Qdu" secondAttribute="bottom" constant="94.5" id="wvB-Pv-VXT"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="fijiImages" destination="KWn-vu-Qdu" id="mzg-9X-Kls"/>
+                        <outlet property="fijiTitle" destination="LnL-eK-dA6" id="d7f-by-yYQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpG-7n-3F6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fijiPic" width="299" height="168"/>
+        <image name="newZealandButtonPic" width="1920" height="1200"/>
+        <image name="pic1Fiji" width="4160" height="3120"/>
+        <image name="pic1NZ" width="4032" height="3024"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kwf-j3-2bW"/>
+    </inferredMetricsTieBreakers>
 </document>
